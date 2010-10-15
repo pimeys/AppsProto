@@ -8,7 +8,40 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="layout_frame">
+
+    <div class="layout_logo">
+      Aalto Apps
+    </div>
+
+    <div class="layout_menu">
+      <span class="layout_menuitem">
+        Featured apps
+      </span>
+
+      <span class="layout_menuitem">
+        Most popular
+      </span>
+ 
+      <span class="layout_menuitem">
+        Recent
+      </span>
+
+      <span class="layout_menuitem">
+        Best apps
+      </span>
+ 
+    </div>
+
+    <div class="layout_master">
+      <%= yield %>
+    </div>
+
+    <div class="layout_footer">
+      Official looking footer here
+    </div>
+
+  </div>
 
 </body>
 </html>
