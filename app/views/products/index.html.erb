@@ -1,27 +1,21 @@
-<h1>Listing products</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Download url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @products.each do |product| %>
-  <tr>
-    <td><%= product.name %></td>
-    <td><%= product.description %></td>
-    <td><%= product.download_url %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <div class="productlist_item">
+        <div class="product_image">
+            image
+        </div>
+        <div class="product_info">
+            <div class="product_info_header">
+                <div><%= product.name %></div>
+                <div>category</div>
+                <div>by: manufacturer</div>
+                <div>*****</div>
+            </div>
+            <div class="product_description">
+                <%= product.description %>
+            </div>
+        </div>
+        <div class="product_download">
+            <a href="<%= product.download_url %>">download</a>
+        </div>
+    </div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Product', new_product_path %>
