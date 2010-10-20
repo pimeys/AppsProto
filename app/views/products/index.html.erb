@@ -1,3 +1,7 @@
+<%= link_to "New product", :controller => "products", :action => "new" %>
+<% if flash[:notice] %>
+	<p style="color:red;"><%= flash[:notice] %></p>
+<% end %>
 <% @products.each do |product| %>
     <div class="productlist_item">
         <div class="product_image">
