@@ -19,7 +19,10 @@
             </div>
         </div>
         <div class="product_download">
-            <a href="<%= product.download_url %>">download</a>
+						<%= link_to "download", product.download_url %>
+						<%= button_to "delete", { :action => "destroy", :id => product.id }, 
+																		:confirm => "Really delete product %{product_name}" % {:product_name => product.name},
+																		:method => :delete %>
         </div>
     </div>
 <% end %>
